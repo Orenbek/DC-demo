@@ -1,6 +1,6 @@
 # DC-demo
 Developed a Classic Wechat mini-app for trainning  (front end to back end)
-个人开发的小程序项目。主要有文章，音乐，电影，以及个人四大界面。
+##个人开发的小程序项目。主要有文章，音乐，电影，以及个人四大界面。
 目前完成的功能有：
 1.文章页面：查看文章（从后端请求HTML富文本文章，之后用rich-text组件渲染，更加贴合生产环境。效果还是不错的。后端用腾讯云开发）
   以及点赞，收藏。（评论功能将很快很快实现）
