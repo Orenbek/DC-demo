@@ -1,0 +1,17 @@
+<template name='MusicController'>
+  <view class='controller' animation='{{myAnimation}}'>
+  <view class='main'>
+    <image bindtap='onControllerTap' class='controller-cover-img' src='/images/music/a34.png'></image>
+    <text class='controller-song-name'>Lost Star</text>
+    <view class='tool'>
+      <image class='play-stop'src="{{isPlayingMusic? '/images/icon/pause-mini.png' : '/images/icon/play-mini.png'}}"  bindtap='onPlayStopTap'></image>
+      <image class='next-song' src='/images/icon/next.png'></image>
+    </view>
+  </view>
+  <view class='more'>
+    <image bindtap='onLike' src="{{collectedMusic? '/images/icon/liked.png' : '/images/icon/like.png'}}"></image>
+     <image src='/images/icon/song-comment.png'></image>
+      <image src='/images/icon/share-song.png'></image>
+  </view>
+  </view>
+</template>

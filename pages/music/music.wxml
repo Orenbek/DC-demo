@@ -1,0 +1,41 @@
+<import src='music-controller/music-controller-template.wxml' />
+<view class='contain'>
+  <view class='components' catchtap='on3itemTap' data-itemId='my-cllections'>
+    <image class='component-img' src='/images/music/fm.png'></image>
+    <text class='component-title'>我的收藏</text>
+  </view>
+  <view class='components' catchtap='on3itemTap' data-itemId='daily-recom'>
+    <image class='component-img' src='/images/music/daily.png'></image>
+    <text class='component-title'>每日推荐</text>
+  </view>
+  <view class='components' catchtap='on3itemTap' data-itemId='ranking'>
+    <image class='component-img' src='/images/music/paihang.png'></image>
+    <text class='component-title'>排行榜</text>
+  </view>
+  <view class='components' catchtap='onWholeAlbumsTap'>
+    <image class='component-img' src='/images/music/gedan.png'></image>
+    <text class='component-title'>全部歌单</text>
+  </view>
+</view>
+<view class='horizon'></view>
+
+<view>
+  <text class='recom-title'> 精彩歌单 </text>
+  <image src='/images/icon/b46.png' style='width: 16rpx; height: 20rpx;'></image>
+</view>
+
+<!-- 歌单列表 -->
+<view class='cover-contain'>
+  <block wx:for="{{albums}}" wx:for-item='album'>
+    <view class='cover' bindtap='onCoverTap' data-albumId='{{album.albumId}}'>
+      <image class='cover-img' src='{{album.coverImg}}'></image>
+      <text class='cover-title'>{{album.title}}</text>
+    </view>
+  </block>
+</view>
+
+<view>
+  <template is='MusicController' data='{{isPlayingMusic,myAnimation,collectedMusic,controllerTaped}}' />
+</view>
+
+<view style="height: 120rpx;" />

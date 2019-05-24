@@ -1,0 +1,17 @@
+<view>
+  <text class='recom-title'> 所有歌单 </text>
+  <image src='/images/icon/b46.png' style='width: 16rpx; height: 20rpx;'></image>
+</view>
+
+<view class='cover-contain'>
+  <block wx:for="{{album}}" wx:for-item='album' wx:for-index='index'>
+    <view class='cover' bindtap='onCoverTap' data-albumId='{{album.albumId}}'>
+      <image class='cover-img' src='{{album.coverImg}}'></image>
+      <view class='list'>
+      <text class='song'>{{'1.'+album.songs[0].songTitle}}</text>
+      <text class='song'>{{'2.'+album.songs[1].songTitle}}</text>
+      <text class='song'>{{'3.'+album.songs[2].songTitle}}</text>
+      </view>
+    </view>
+  </block>
+</view>

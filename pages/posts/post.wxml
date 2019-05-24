@@ -1,0 +1,18 @@
+<!--pages/posts/post.wxml-->
+<import src='post-item/post-item-template.wxml'/> 
+<view>
+  <swiper indicator-dots='true' autoplay='true' interval='2000'>
+  <!-- 这里用到了冒泡事件，catchtap可以写在swiper组件上 -->
+   <block wx:for="{{swiper_post}}" wx:for-item='swiper' wx:for-index="index">
+    <swiper-item catchtap='onSwiperTap' data-postId='{{swiper._id}}' data-swiperIndex = '{{index}}'>
+      <image mode='aspectFill' src='{{swiper.post_img_src}}'></image>
+      <text>{{swiper.title}}</text>
+    </swiper-item>
+    </block>
+  </swiper>
+  <block wx:for='{{posts_key}}' wx:for-item='item' wx:for-index="index">
+    <view catchtap="onPostTap" data-postId='{{item._id}}' data-postIndex='{{index}}'>
+      <template is='postItem' data="{{...item}}"/>
+    </view>
+  </block>
+</view>

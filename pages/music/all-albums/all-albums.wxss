@@ -1,0 +1,45 @@
+.recom-title {
+  margin-left: 40rpx;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  font-weight: 500;
+  color: black;
+}
+
+.cover-contain {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20rpx 15rpx;
+}
+
+.cover {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30rpx;
+  margin-left: 20rpx;
+  width: 100%;
+  height: 220rpx;
+}
+
+.cover-img {
+  width: 220rpx;
+  height: 220rpx;
+  margin-bottom: 15rpx;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 5rpx auto 5rpx 15rpx;
+}
+
+.song {
+  line-height: 70rpx;
+  width: 420rpx;
+  font-size: 24rpx;
+  word-break: break-all;
+  /* 换行用的 */
+}

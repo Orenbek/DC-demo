@@ -1,0 +1,65 @@
+
+.controller{
+  height: 116rpx;
+  position: fixed;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;  
+  /* 上面这个width是必须的。不设置则不会设100%填充一行 */
+  /* bottom: 10rpx; */
+  border-bottom: 2px solid #ededed;
+  border-top: 2px solid #ededed;
+  background: white;
+  /* transition: 0.1s; */
+}
+
+.main{
+  z-index: 1;
+}
+
+.controller-cover-img{
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 10rpx;
+  vertical-align: middle;
+}
+
+.controller-song-name{
+ /* padding: 40rpx auto; */
+ margin-left: 20rpx; 
+ vertical-align: middle;
+  font-size: 28rpx;
+}
+
+.tool{
+   float: right;
+  margin-right: 30rpx;
+  vertical-align: middle;
+}
+
+.play-stop{
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 20rpx;
+   margin-right: 20rpx;
+}
+
+.next-song{
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 20rpx;
+}
+
+.more{
+   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: middle;
+  overflow: hidden;
+  margin: 6rpx 80rpx;
+}
+
+.more image{
+  width: 70rpx;
+  height: 70rpx;
+}

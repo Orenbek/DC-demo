@@ -1,0 +1,40 @@
+.my-avatar {
+  width: 100%;
+  height: 140rpx;
+  line-height: 140rpx;
+  border-bottom: 8px solid #ededed;
+  border-top: 8px solid #ededed;
+}
+
+.img-profile {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  vertical-align: middle;
+  margin-left: 30rpx;
+  background-color: #fff;
+}
+
+.my-name {
+  margin-left: 30rpx;
+  font-size: 36rpx;
+}
+
+.containers {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #ededed;
+}
+
+.containers image {
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  margin-left: 30rpx;
+}
+
+.containers text {
+  margin-left: 30rpx;
+  font-size: 24rpx;
+}

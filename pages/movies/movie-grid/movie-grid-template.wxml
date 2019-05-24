@@ -1,0 +1,14 @@
+<import src='../movie/movie-template.wxml' />
+<template name='movieGridTemplate'>
+  <!-- <scroll-view calss='grid-container' scroll-y='true' scroll-x='false' bindscrolltolower='onScrollLower'> -->
+  <!-- 上面的scroll-y和scroll-x填true和false都一样，都会允许。只有填''才会不允许滑动 -->
+  <!-- 这里写的scroll-view的bindscrolltolower事件在more-movie页面中无法传递。不知道为什么 -->
+  <view class="grid-container">
+    <block wx:for='{{movies}}' wx:for-item='movie'>
+      <view class='single-view-container'>
+        <template is='movieTemplate' data='{{...movie}}' />
+      </view>
+    </block>
+    <!-- </scroll-view> -->
+  </view>
+</template>

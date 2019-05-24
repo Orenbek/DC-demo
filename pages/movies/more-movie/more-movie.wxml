@@ -1,0 +1,4 @@
+<import src='../movie-grid/movie-grid-template.wxml'/>
+<!-- <scroll-view class='grid-container'  scroll-y= '这里写true和false都一样，都会允许，只有空着才会不允许滑动' scroll-x='' bindscrolltolower='onScrollLower'> -->
+  <template is='movieGridTemplate' data='{{movies}}'/>
+<!-- </scroll-view> -->

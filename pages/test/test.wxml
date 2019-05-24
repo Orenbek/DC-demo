@@ -1,0 +1,5 @@
+<button bindtap='onDelete'>delete all</button>
+<button open-type="share">分享</button>
+<button bindtap='userinfo' open-type='getUserInfo' bindgetuserinfo='getUserInfo'>获取用户信息</button>
+<button bindtap='rrr'>rrrr</button>
+<button bindtap='testMap'>map</button>

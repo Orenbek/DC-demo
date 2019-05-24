@@ -1,0 +1,153 @@
+@import '../music-controller/music-controller-template.wxss';
+.controller{
+  top: 1080rpx;
+}
+
+.underskin{
+  height: 400rpx;
+  width: 100%;
+}
+
+.bg-img{
+   width: 100%;
+  height: 500rpx;
+  -webkit-filter: blur(40px);
+}
+
+.heads{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 90rpx;
+  width: 100%;
+  height: 265rpx;
+}
+
+.cover-img{
+  margin-left: 40rpx;
+   width: 220rpx;
+  height: 220rpx;
+}
+
+.right-heads{
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx 40rpx 40rpx 30rpx;
+  width: 420rpx;
+}
+
+.title{
+  font-size: 34rpx;
+   word-break: break-all;
+   color: #fff;
+}
+
+.statis{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+
+.listen{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+
+.listened-count{
+  font-size: 24rpx;
+  color: #fff;
+  line-height: 50rpx;
+}
+
+.e-function{
+  position: absolute;
+  top: 380rpx;
+  width: 100%;
+  /* 这里必须得套一个view，因为positon为absolute时，width默认不是100%，
+  另外width100%要是和margin一起用，会导致溢出，所以得套用两个view来实现。 */
+}
+
+.functions{
+  /* position: absolute; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto 90rpx;
+  /* top: 380rpx; */
+  /* width: 100%; */
+}
+
+.function{
+  /* margin: auto 40rpx; */
+   text-align: center; /*设置文本水平居中*/
+    display: flex;
+  flex-direction: column;
+}
+
+.function image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.function text{
+  font-size: 28rpx;
+  color: #666;
+  /* 居中放到这里面不会成功居中，不知为啥 */
+}
+
+.songs-container{
+ position: absolute;
+ width: 100%;
+  top: 500rpx;
+}
+
+.song-container{
+  /* width: 100%; */
+  height: 100rpx;
+}
+
+.num-container{
+  width: 99rpx;
+   text-align: center; 
+   float: left;
+   height: 100rpx;
+}
+
+.num{
+  /* margin-top: 50rpx; */
+  /* 上面这个没用，flex也没用*/
+  line-height:100rpx;
+  /* 行高等于container的高度，实现垂直居中。 */
+  color: #999;
+  font-size: 28rpx;
+}
+.name-author{
+  display: flex;
+  flex-direction: column;
+  height: 100rpx;
+  position: relative;
+}
+.song-name{
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #000;
+}
+.song-author{
+  position: absolute;
+  top: 60rpx;
+  font-size: 18rpx;
+  color: #333;
+  padding-bottom: 0rpx;
+}
+
+.horizon {
+  width: 660rpx;
+  height: 1px;
+  background-color: #e5e5e5;
+  /* vertical-align: middle; */
+  position: absolute;
+  top: 100rpx;
+  /* margin: 0 auto; */
+  /* z-index: -99; */
+}

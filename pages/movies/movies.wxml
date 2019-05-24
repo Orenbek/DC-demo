@@ -1,0 +1,25 @@
+<import src='movie-list/movie-list-template.wxml' />
+<import src='movie-grid/movie-grid-template.wxml'/>
+<!-- 这里出现了个问题，我要是写src='/movie-list/movie-list-template.wxml'会加载不出来。难道我相对路径怎么写还没搞明白？  好像是前面加个/意思是根目录-->
+<view class='search'>
+  <icon type='search' class='search-img' size='13' color='#405f80'></icon>
+  <input type='text' placeholder='血战钢锯岭、你的名字' value="{{inputValue}}" bindinput="setInputValue" placeholder-class='placeholder' bindfocus='onBindFocus' bindconfirm='onConfirm'></input>
+  <!-- bindchange='onBindChange' -->
+  <image wx:if='{{searchPanelShow}}' src='/images/icon/xx.png' class='xx-img' bindtap='onCancelImgTap'></image>
+  <!-- 这里你也可以用默认的icon图标，也可以自定义。 -->
+</view>
+<view class='container' wx:if="{{containerShow}}">
+  <view class='movies-template'>
+    <template is='movieListTemplate' data='{{...inTheaters}}' />
+  </view>
+  <view class='movies-template'>
+    <template is='movieListTemplate' data='{{...comingSoon}}' />
+  </view>
+  <view class='movies-template'>
+    <template is='movieListTemplate' data='{{...top250}}' />
+  </view>
+</view>
+
+  <scroll-view class='search-panel' wx:if='{{searchPanelShow}}' scroll-y= 'true' scroll-x='' bindscrolltolower='onScrollLower'>
+  <template is='movieGridTemplate' data='{{...searchResult}}'/>
+  </scroll-view>

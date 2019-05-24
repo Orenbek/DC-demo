@@ -1,0 +1,22 @@
+<!--pages/posts/post-detail/post-detail.wxml-->
+<view class='container'>
+  <image class='head-image' src='{{postData.post_img_src}}'></image>
+  <!-- <text class='title'>{{postData.title}}</text> -->
+  <view class='tool'>
+    <view class='circle-img'>
+      <image catchtap='onItemTap' data-item="thumbuped_posts" src="{{thumbUped===true ? '/images/icon/thumb-uped1.png' : '/images/icon/thumb-up1.png'}}"></image>
+      <image catchtap='onItemTap' data-item="collected_posts" src="{{collected===true ? '/images/icon/collection.png' : '/images/icon/collection-anti.png'}}"></image>
+      <image catchtap="onShareTap" src='/images/icon/share.png'></image>
+    </view>
+    <view class='horizon'></view>
+  </view>
+  <view class="find-content">
+    <rich-text class='detail' nodes="{{postContent}}" type='text'></rich-text>
+  </view>
+  <view class='author-date'>
+    <image class='avatar' src='{{postData.avatar_img_src}}'></image>
+    <text class='author'>{{postData.author}}</text>
+    <text class='const-text'>发表于</text>
+    <text class='date'>{{postData.postTime}}</text>
+  </view>
+</view>
